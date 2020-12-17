@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Crestie Crazed :: Inquiries </title>
+    <meta charset="uft 8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+    <meta name="author" content="Melissa Weigman">
+</head>
+<style>
+    .navbar-collapse ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .navbar-collapse li {
+        float: left;
+    }
+
+    .navbar-collapse li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar-collapse li a:hover {
+        background-color: #111;
+    }
+</style>
+<body>
+<div id="wrapper">
+    <header>
+        <h1> Crestie Crazed </h1>
+    </header>
+    <nav class="navbar navbar-light bg-light navbar-expand-md">
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html"> Home </a></li>
+                <li class="nav-item"><a class="nav-link" href="breeders.html"> Breeders </a></li>
+                <li class="nav-item"><a class="nav-link" href="lizards.html"> About our Lizards</a></li>
+                <li class="nav-item"><a class="nav-link" href="inquiries.html"> Inquiries </a></li>
+                <li class="nav-item"><a class="nav-link" href="contract.html"> Guarantee </a></li>
+                <li class="nav-item"><a class="nav-link" href="photos.html"> Gallary </a></li>
+                <li class="nav-item"><a class="nav-link" href="pay.html"> Payment </a></li>
+            </ul>
+        </div>
+
+        <main>
+            <h2> Inquires at Crestie Crazed </h2>
+            <h3> Contact Us Today!</h3>
+
+            <p>Required fields are marked with an asterisk *</p>
+
+            <form method="post" action="https://webdevbasics.net/scripts/pacific.php">
+                <label for="myFName">*First Name:</label>
+                <input id="myFName" name="myFName" type="text" required>
+                <label for="myLName">*Last Name:</label>
+                <input id="myLName" name="myLName" type="text" required>
+                <label for="myEmail">*E-Mail:</label>
+                <input id="myEmail" name="myEmail" type="email" size="35" required>
+                <label for="myPhone">Phone:</label>
+                <input id="myPhone" name="myPhone" type="tel" maxlength="12">
+                <label for="myArrival">Arrival Date:</label>
+                <input id="myArrival" name="myArrival" type="data">
+                <label for="myNights">Nights:</label>
+                <input id="myNights" name="myNights" type="number" min="1" max="14">
+                <label for="myComments">*Comments:</label>
+                <textarea id="myComments" name="myComments" rows="2" col="30" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+
+            <div id="contact">
+                <span class="resort"> Crestie Crazed </span> <br>
+                12010 Crestie Crazed Road <br>
+                Zephyr, CA 95555 <br>
+            </div>
+            <p>
+                <a id="mobile" href="tel:888-555-5555">888-555-5555</a>
+                <span id="desktop">888-555-5555</span>
+
+        </main>
+        <footer>
+            Copyright &copy; 2018 Melissa Weigman
+            <br> <a href="mailto:mweigman1@my.wctc.edu"> Looking to make a webpage?</a>
+        </footer>
+</div>
+</body>
+</html>

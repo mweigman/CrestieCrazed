@@ -1,0 +1,412 @@
+.center {
+    text-align: center;
+    border-bottom: solid black;
+}
+
+/*!*@version2@version *!*/
+/*!*@createarg[*/
+/*{'group':'controls','name':'theme_color','type':'color','title':'Controls color','default':'#ffffff',desc:'Customize Theme color for your player'},*/
+/*{'group':'design','name':'arrows_color','type':'color','title':'Lightbox arrows color','default':'#ffffff',desc:'Customize lightbox arrows color'}*/
+/*]@createarg*/
+/**!*/
+
+
+gallery_div ~ .ze_imagelist {
+    position: relative;
+}
+
+/*!***/
+/* * Grid container*/
+/* *!*/
+
+gallery_div ~ .ze_tiles {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+gallery_div ~ ul.ze_tiles .ze_box > .ze_title {
+    width: 100%;
+    color: #fff;
+    font-size: 13px;
+    position: absolute;
+    line-height: 13px;
+    bottom: 8px;
+    height: 35px;
+    background: rgba(0, 0, 0, 0.52);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/*!***/
+/* * Grid items*/
+/* *!*/
+
+gallery_div ~ .ze_tiles li {
+    border: none;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+gallery_div ~ .ze_tiles li .ze_item {
+    margin: 0;
+    padding: 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+gallery_div ~ .ze_tiles li a {
+    cursor: zoom-in;
+}
+
+gallery_div ~ .ze_tiles li img {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+gallery_div ~ .ze_tiles li.inactive {
+    visibility: hidden;
+    opacity: 0;
+    float: left;
+    padding: 0 0 7px 7px;
+    background-image: none;
+    list-style-type: none;
+}
+
+gallery_div ~ .ze_tiles li img {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border: 0px solid white;
+    transition: .5s ease all;
+}
+
+gallery_div ~ .ze_tiles .ze_thumb:hover img {
+    -webkit-transform: scale3d(1.3, 1.3, 1.3);
+    -ms-transform: scale3d(1.3, 1.3, 1.3);
+    transform: scale3d(1.3, 1.3, 1.3);
+}
+
+gallery_div ~ .wookmark-placeholder {
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    background-color: #eee;
+    border: 1px solid #dedede;
+    z-index: -1;
+}
+
+gallery_div ~ ul.ze_tiles a {
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+}
+
+gallery_div ~ ul.ze_tiles a:hover {
+    background: #DBE6ED;
+    color: #000;
+}
+
+
+gallery_div ~ ul.ze_tiles .ze_title {
+    color: #fff;
+    line-height: 1.1;
+    padding: 10px;
+    background: transparent;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: auto;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%
+
+}
+
+gallery_div ~ ul.ze_tiles li:hover .ze_title {
+    opacity: 1;
+    -webkit-transition: ease .5s opacity;
+}
+
+
+gallery_div ~ .ze_tiles .hide {
+    display: none;
+}
+
+gallery_div ~ .ze_tiles li a div.ze_overlay {
+    position: absolute;
+    background-color: #c7a35b;
+    background: rgba(199, 163, 91, 0.8);
+    width: 100%;
+    height: 100%;
+    top: 0 !important;
+    left: 0 !important;
+    opacity: 0;
+    transition: .2s ease opacity;
+    z-index: 1000;
+}
+
+gallery_div ~ .ze_tiles li:hover a div.ze_overlay {
+    opacity: 1;
+}
+
+gallery_div ~ .ze_tiles li a div.ze_overlay .ze_title {
+    line-height: 1.1;
+    font-size: 14px;
+}
+
+gallery_div ~ .ze_box {
+    position: relative;
+}
+
+gallery_div ~ .ze_type_video .ico {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    background: url('~skin_path~css/video_ico.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* flip */
+
+gallery_div ~ .ze_tiles li.ze_flip:hover .ze_box {
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -khtml-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    -o-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+}
+
+gallery_div ~ .ze_tiles li.ze_flip .ze_box {
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    -o-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+}
+
+gallery_div ~ .ze_tiles li.ze_flip .ze_title {
+    visibility: hidden;
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -khtml-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+}
+
+gallery_div ~ .ze_tiles li.ze_flip:hover .ze_title {
+    visibility: visible;
+    transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    -khtml-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transition: all 0.9s ease-out;
+    -moz-transition: all 0.9s ease-out;
+    -o-transition: all 0.9s ease-out;
+    transition: all 0.9s ease-out;
+}
+
+.ze-swipebox-caption .ze_lightbox_title {
+    display: block;
+    line-height: 27px;
+}
+
+.ze-swipebox-caption .ze_lightbox_description {
+    display: block;
+    line-height: 20px;
+    font-size: .8em;
+    opacity: .7;
+}
+
+.ze-swipebox-caption br {
+    display: none;
+}
+
+/* CUSTOM */
+
+gallery_div ~ ul.pagination li a {
+    margin: 5px 3px;
+    padding: 5px 10px;
+    background: #eee;
+    color: #c7a35b;
+    font-weight: normal;
+}
+
+gallery_div ~ ul.pagination li a:hover {
+    color: #eee;
+    background: #dcb35f;
+}
+
+gallery_div ~ ul.pagination li a.active {
+    color: #000 !important;
+    cursor: default;
+    background: transparent !important;
+}
+
+gallery_div ~ ul.pagination li a.firstBtn,
+
+gallery_div ~ ul.pagination li a.lastBtn,
+
+gallery_div ~ ul.pagination li a.prevBtn,
+
+gallery_div ~ ul.pagination li a.nextBtn {
+    font-size: inherit;
+}
+
+gallery_div ~ .ze_search_cont {
+    float: none;
+    text-align: center;
+    width: auto;
+    margin: 20px auto -10px;
+}
+
+gallery_div ~ .ze_tiles_btn {
+    margin: 20px 0 10px 0;
+    padding: 0;
+    text-align: center !important;
+}
+
+gallery_div ~ .ze_tiles_btn li {
+    margin: 5px 0;
+    background: #eee;
+    color: #c7a35b;
+    font-weight: normal;
+}
+
+gallery_div ~ .ze_tiles_btn li:hover {
+    color: #eee;
+    background: #dcb35f;
+}
+
+gallery_div ~ .ze_tiles_btn li.active {
+    color: #000 !important;
+    cursor: default;
+    background: transparent !important;
+}
+
+gallery_div ~ .ze_search_cont a:first-child,
+
+gallery_div ~ .cp-download-all-link {
+    border: 1px solid #c9a762;
+    background: #dcb35f;
+}
+
+.ze-swipebox-overlay {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.ze-swipebox-action, .ze-swipebox-caption {
+    background: rgba(13, 13, 13, 0.51);
+}
+
+@font-face {
+    font-family: 'cp-sliders';
+    src: url("data:application/x-font-ttf;charset=utf-8;base64,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") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+#swipebox-overlay ~ gallery_div ~ .ze-swipebox-action a {
+    background: none !important;
+    text-indent: 0;
+    font-size: 0;
+    line-height: 0;
+    text-decoration: none;
+}
+
+#swipebox-overlay ~ gallery_div ~ .ze-swipebox-action a:before {
+    font-size: 20px;
+    padding: 14px;
+    color: #fff;
+    color: arg_arrows_color ~;
+    display: inline-block;
+    font-family: 'cp-sliders' !important;
+    text-indent: 0;
+    speak: none;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#swipebox-overlay ~ gallery_div ~ .ze-swipebox-action a.ze-swipebox-prev:before {
+    content: '\e911';
+}
+
+#swipebox-overlay ~ gallery_div ~ .ze-swipebox-action a.ze-swipebox-next:before {
+    content: '\e910';
+}
+
+#swipebox-overlay ~ gallery_div ~ .ze-swipebox-action a.ze-swipebox-close:before {
+    content: '\e907';
+}
+
+div.videoTemplateVersion2 .mejs-container .mejs-overlay-play > .mejs-overlay-button:before {
+    color: arg_theme_color ~
+}
+
+div.videoTemplateVersion2 .mejs-container .mejs-controls .mejs-time {
+    color: #fff;
+    color: arg_theme_color ~;
+}
+
+div.videoTemplateVersion2 .mejs-container .mejs-controls .mejs-time span {
+    color: #fff;
+    color: arg_theme_color ~;
+}
+
+div.videoTemplateVersion2 .mejs-container .mejs-controls .mejs-button button {
+    color: #fff;
+    color: arg_theme_color ~
+}
+
+div.videoTemplateVersion2 .mejs-container .mediaElementVideoContainer .share-button:before {
+    color: #fff;
+    color: arg_theme_color ~
+}
+
+div.videoTemplateVersion2 .mejs-container .mejs-overlay.mejs-overlay-play .mejs-overlay-button {
+    color: #FFF;
+    color: arg_theme_color ~;
+}
+
+div.videoTemplateVersion2 .mejs-container .share-button:before {
+    color: #fff;
+    color: arg_theme_color ~;
+}
+
+div.videoTemplateVersion2 .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+    background: arg_theme_color ~;
+}

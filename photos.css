@@ -1,0 +1,164 @@
+/*@createarg[
+{'group':'design','name':'arrows_color','type':'color','title':'Arrows color','default':'#fff',desc:'Customize slider arrows color'},
+]@createarg */
+
+#
+~ gallery_div ~ .ze_nivoSlider {
+    position: relative;
+    background: transparent url(~skin_path~css/images/loading.gif) no-repeat 50% 50%;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    box-shadow: 0px 1px 5px 0px #4a4a4a;
+}
+
+#
+~ gallery_div ~ .ze_nivoSlider img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+#
+~ gallery_div ~ .ze_nivoSlider a {
+    border: 0;
+    display: block;
+}
+
+#
+~ gallery_div ~ .nivo-controlNav {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#
+~ gallery_div ~ .nivo-controlNav a {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(~skin_path~css/images/bullets.png) no-repeat;
+    text-indent: -9999px;
+    border: 0;
+    margin: 0 2px;
+}
+
+#
+~ gallery_div ~ .nivo-controlNav a.active {
+    background-position: 0 -22px;
+}
+
+#
+~ gallery_div ~ .nivo-directionNav a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    border: 0;
+    opacity: 0;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+#
+~ gallery_div ~ .nivo-directionNav .nivo-prevNav,
+
+#
+~ gallery_div ~ .nivo-directionNav .nivo-nextNav {
+    background: transparent !important;
+    font-size: 0;
+}
+
+#
+~ gallery_div ~ .nivo-directionNav .nivo-prevNav:before,
+
+#
+~ gallery_div ~ .nivo-directionNav .nivo-nextNav:before {
+    font-size: 30px;
+    display: block;
+    color: #fff;
+    opacity: .6;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+    font-family: 'cp-sliders' !important;
+    text-indent: 0;
+    speak: none;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#
+~ gallery_div ~ .nivo-directionNav .nivo-prevNav:before {
+    content: '\e915';
+}
+
+#
+~ gallery_div ~ .nivo-directionNav .nivo-nextNav:before {
+    content: '\e914';
+}
+
+#
+~ gallery_div ~ :hover .nivo-directionNav a {
+    opacity: 1;
+}
+
+#
+~ gallery_div ~ a.nivo-nextNav {
+    background-position: -30px 0 !important;
+    right: 15px;
+}
+
+#
+~ gallery_div ~ a.nivo-prevNav {
+    left: 15px;
+}
+
+#
+~ gallery_div ~ .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#
+~ gallery_div ~ .nivo-caption a {
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+}
+
+#
+~ gallery_div ~ .nivo-caption a:hover {
+    color: #fff;
+}
+
+#
+~ gallery_div ~ .nivo-controlNav.nivo-thumbs-enabled {
+    width: 100%;
+}
+
+#
+~ gallery_div ~ .nivo-controlNav.nivo-thumbs-enabled a {
+    width: auto;
+    height: auto;
+    background: none;
+    margin-bottom: 5px;
+}
+
+#
+~ gallery_div ~ .nivo-controlNav.nivo-thumbs-enabled img {
+    display: block;
+    width: 120px;
+    height: auto;
+}
+
+#
+~ gallery_div ~ .nivo-directionNav .nivo-prevNav:before,
+
+#
+~ gallery_div ~ .nivo-directionNav .nivo-nextNav:before {
+    color: # ~ arg_arrows_color ~;
+}
